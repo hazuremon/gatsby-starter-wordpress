@@ -16,6 +16,12 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         url: process.env.WPGRAPHQL_URL,
+        auth: {
+          htaccess: {
+            username: process.env.HTUSER,
+            password: process.env.HTPASSWORD
+          }
+        }
       },
     },
     "gatsby-plugin-sharp",
